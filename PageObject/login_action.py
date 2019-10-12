@@ -6,6 +6,12 @@
 from basepage import BasePage
 from selenium.webdriver.common.by import By
 import unittest
+import logging.config
+
+# get logging instance by file config  all config are in log.conf file
+CON_LOG = 'log.conf'
+logging.config.fileConfig(CON_LOG)
+logging = logging.getLogger()
 
 
 class LoginPage(BasePage):
@@ -31,10 +37,18 @@ class LoginPage(BasePage):
 
 
 def test_login_action(driver, username, password):
+    logging.info("====start test===")
     login_page = LoginPage(driver)
+    logging.info("===get_driver===")
+
     login_page.type_username(username)
+    logging.info("=== type username===")
+
     login_page.type_password(password)
+    logging.info("===type password===")
+
     login_page.submit_click()
+    logging.info("===finished===")
 
 
 
