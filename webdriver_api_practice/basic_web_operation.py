@@ -51,6 +51,7 @@ def keyboard_action():
     driver = get_driver()
     driver.get(url)
     driver.find_element_by_css_selector("#kw").send_keys("Python")
+    print(driver.title)
     sleep(2)
     # simulate keyboard action CTRL + A
     driver.find_element_by_css_selector("#kw").send_keys(Keys.CONTROL, 'a')
@@ -62,6 +63,7 @@ def keyboard_action():
     driver.find_element_by_css_selector(".sec-input").send_keys(Keys.CONTROL, 'v')
     sleep(3)
     driver.find_element_by_css_selector("#stb").click()
+    print(driver.title)
     sleep(3)
     driver.close()
 

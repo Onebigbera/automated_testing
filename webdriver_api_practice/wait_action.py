@@ -54,6 +54,7 @@ def implicit_wait_demo():
     finally:
         print("Process finished!")
     sleep(3)
+    print(driver.title)
     driver.close()
 
 

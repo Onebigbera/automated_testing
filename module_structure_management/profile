@@ -1,0 +1,14 @@
+    structure management
+StartEnd.py   ----SetUp and TearDown class
+Operation.py  ----Tested class
+test_add.py   ---- add method tested
+test_sub.py   ---- sub method tested
+runtest.py    ---- test case run management
+
+    skip testcase and expected failture
+unittest.skip()                 to skip the testcase
+unittest.skipIf(condition)      if condition: skip the testcase
+unittest.skipUnless(condition)  if not condition: skip the testcase
+unittest.expectedFailure        expect testcase failure
+
+
